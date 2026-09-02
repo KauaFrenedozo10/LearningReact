@@ -32,6 +32,23 @@ export default function App() {
     setHistorico([])
 
   }
+  function desfazerJogada() {
+    if(historico.length === 0) {
+      return
+    }
+    const ultimaJogada = historico[historico.length - 1];
+    
+    if(ultimaJogada.time === "Time A") {
+      setPontosA(pontosA - ultimaJogada.pontos)
+    }else {
+      setPontosB(pontosB - ultimaJogada.pontos)
+    }
+
+    setHistorico(historico.slice(0,-1));
+
+    setPosseTimeA(ultimaJogada.time === "Time A")
+  }
+  
   return (
     <div style={{ textAlign: 'center', fontFamily: 'sans-serif', maxWidth: '600px', margin: '0 auto' }}>
       <h1>Placar do Jogo</h1>
@@ -46,7 +63,7 @@ export default function App() {
       />
       <Historico historico={historico} />
 
-      <ControlesGerais onZerarPlacar={zeraPlacar}/>
+      <ControlesGerais onZerarPlacar={zeraPlacar} onDesfazerJogada={desfazerJogada}/>
     </div>
   );
 }

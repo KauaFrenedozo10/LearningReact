@@ -1,0 +1,16 @@
+body {
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  font-family: monospace;
+  font-size: 50px;
+}
