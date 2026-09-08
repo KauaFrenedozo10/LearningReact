@@ -14,6 +14,7 @@ function AvisoTemporizado() {
     };
   }, []);
 
+
   return (
     <div>
       {visivel && <p>Bem-vindo!</p>}
