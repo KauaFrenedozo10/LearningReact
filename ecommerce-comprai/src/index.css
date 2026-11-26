@@ -1,0 +1,14 @@
+/* Ajustes pequenos sobre o Bootstrap. */
+.quantity-input {
+  max-width: 6rem;
+}
+
+/* Contraste: o Bootstrap já traz foco visível; reforçamos para links e botões. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
